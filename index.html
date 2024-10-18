@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Information Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Candidate Information Form</h2>
+    <form id="candidateForm" onsubmit="return validateForm()">
+      
+      <!-- Full Name -->
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+      
+      <!-- Email Address -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+      
+      <!-- Phone Number -->
+      <label for="phone">Phone Number:</label>
+      <input type="number" id="phone" name="phone" placeholder="Enter your phone number">
+      
+      <!-- Percentage -->
+       <label for="percentage"> Percentage: </label>
+       <input type="number" id="percentage" name="percentage" placeholder="Enter your percentage">
+       <span id="error-message" style="color:red; display:none;">Please enter a value between 0 and 100.</span>
+
+      <!-- Gender -->
+      <label>Gender:</label>
+      <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female </label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other"> Other</label>
+      </div>
+      
+      <!-- Address -->
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+      
+      <!-- Agree to Terms -->
+      <label>
+        <input type="checkbox" id="terms" name="terms"> I agree to all the terms and conditions
+      </label>
+      
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
